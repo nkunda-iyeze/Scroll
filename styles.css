@@ -184,6 +184,7 @@ p {
   border-color: var(--clr-white);
   border-radius: 0;
   padding: 0.5rem 1rem;
+
 }
 
 .btn:hover {

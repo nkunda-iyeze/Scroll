@@ -25,6 +25,10 @@ navToggle.addEventListener(`click`, function () {
 const navBar = document.querySelector(`#nav`);
 const topLink = document.querySelector(`.top-link`)
 window.addEventListener(`scroll`, function () {
+    onScroll();
+});
+// this function is invoked when a client scroll the page !
+function onScroll() {
     const scrollHeight = window.pageYOffset;
     const navHeight = navBar.getBoundingClientRect().height;
     if (scrollHeight > navHeight) {
@@ -34,7 +38,7 @@ window.addEventListener(`scroll`, function () {
         navBar.classList.remove(`fixed-nav`);
         topLink.classList.remove(`show-link`);
     }
-});
+}
 // ********** smooth scroll ************
 // select links
 const scrollLinks = document.querySelectorAll(`.scroll-link`);
@@ -56,7 +60,7 @@ scrollLinks.forEach(function (link) {
         if (navHeight > 82) {
             position = position + containerHeight;
         }
-        console.log(position);
+        // console.log(position);
         window.scrollTo({
             left: 0,
             top: position,
